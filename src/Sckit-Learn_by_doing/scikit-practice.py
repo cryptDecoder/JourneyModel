@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
 # get data ready
 
-heart_disease = pd.read_csv("../data/datasets_33180_43520_heart.csv")
+heart_disease = pd.read_csv("../../data/datasets_33180_43520_heart.csv")
 print(heart_disease.head())
 
 # create x and y using data

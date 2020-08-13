@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # getting our data ready
-car_sales = pd.read_csv("../data/datasets_1211_2177_car_ad.csv", encoding="ISO-8859-1")
+car_sales = pd.read_csv("../../data/datasets_1211_2177_car_ad.csv", encoding="ISO-8859-1")
 print(car_sales.head())
 print(len(car_sales))
 

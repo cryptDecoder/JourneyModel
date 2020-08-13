@@ -16,7 +16,7 @@ This file demonstrates some of the most useful functions of the beautiful scikit
 import pandas as pd
 import numpy as np
 
-heart_disease = pd.read_csv('../data/datasets_33180_43520_heart.csv')
+heart_disease = pd.read_csv('../../data/datasets_33180_43520_heart.csv')
 # print((heart_disease))
 X = heart_disease.drop('target', axis=1)
 y = heart_disease['target']
