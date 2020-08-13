@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
+import warnings
+import matplotlib.pyplot as plt
 
+warnings.filterwarnings("ignore")
 # get data ready
 
 heart_disease = pd.read_csv("../data/datasets_33180_43520_heart.csv")
@@ -63,3 +66,24 @@ pickle.dump(clf, open("Random_forect.pkl", "wb"))
 # used saved model
 loaded_model = pickle.load(open("Random_forect.pkl", "rb"))
 print("loaded model score : ", loaded_model.score(X_test, y_test))
+
+# Getting our data ready to be used with machine learning
+'''
+    Three main things we have to do:
+        1: Split the into features and labels (usually 'X' and 'y'
+        2: Filling (also called imputing or disregarding missing values
+        3: Converting the non-numerical to numerical values (Also called features encoding) 
+'''
+
+print(" ************ Getting Data ready *************")
+print(heart_disease.head())
+
+X = heart_disease.drop('target', axis=1)
+y = heart_disease['target']
+
+# Split data into trainig and testing data
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+print(X_train.shape, X_test.shape, y_test.shape, y_train.shape)
+
